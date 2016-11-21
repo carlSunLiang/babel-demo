@@ -11,7 +11,24 @@ class App extends React.Component {
     return (
       <div>
         <h1>hello, world</h1>
+        <Book />
       </div>
+    )
+  }
+}
+
+const lists = ['java', 'node', 'php'];
+
+class Book extends React.Component {
+  render() {
+    return (
+      <ul>
+        {
+          lists.map((result, index) => {
+            return (<li key={index}>{result}</li>)
+          })
+        }
+      </ul>
     )
   }
 }
